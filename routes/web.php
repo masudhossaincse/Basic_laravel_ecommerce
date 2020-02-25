@@ -21,6 +21,7 @@ Route::get('/category-product', 'NewShopController@categoryContent')->name('cate
 Auth::routes();
 
 Route::get('/dashboard', 'HomeController@index')->name('home');
+
 /* Category Info */
 Route::get('/category/add', 'CategoryController@createCategory');
 
@@ -32,5 +33,19 @@ Route::get('/category/edit/{id}', 'CategoryController@editCategory');
 Route::post('/category/update', 'CategoryController@updateCategory');
 
 Route::get('/category/delete/{id}', 'CategoryController@deleteCategory');
+
+/* Manufacturer Info */
+Route::get('/manufacturer/add', 'ManufacturerController@createManufacturer');
+Route::post('/manufacturer/save', 'ManufacturerController@storeManufacturer');
+
+Route::get('/manufacturer/manage', 'ManufacturerController@manageManufacturer');
+
+Route::get('/manufacturer/edit/{id}', 'ManufacturerController@editManufacturer');
+Route::post('/manufacturer/update', 'ManufacturerController@updateManufacturer');
+
+Route::get('/manufacturer/delete/{id}', 'ManufacturerController@deleteManufacturer');
+
+
+
 
 
