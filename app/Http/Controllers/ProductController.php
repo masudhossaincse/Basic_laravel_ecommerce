@@ -52,4 +52,11 @@ class ProductController extends Controller
         return redirect('/product/add')->with('message', 'Product Information Saved Successfully');
 
     }
+
+    public function manageProduct()
+    {
+        $products = Product::all();
+        
+        return view('admin.product.manageProduct',['products'=>$products]);
+    }
 }
