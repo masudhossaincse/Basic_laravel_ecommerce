@@ -33,11 +33,11 @@
 
       <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCategory" aria-expanded="true" aria-controls="collapseCategory">
           <i class="fas fa-fw fa-cog"></i>
           <span>Category Info</span>
         </a>
-        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+        <div id="collapseCategory" class="collapse" aria-labelledby="headingCategory" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
            <!--  <h6 class="collapse-header">Custom Components:</h6> -->
             <a class="collapse-item" href="{{ url('/category/add') }}">Add Category</a>
@@ -48,15 +48,29 @@
 
       <!-- Nav Item - Utilities Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseManufacturer" aria-expanded="true" aria-controls="collapseManufacturer">
           <i class="fas fa-fw fa-wrench"></i>
-          <span>Manufacturer</span>
+          <span>Manufacturer Info</span>
         </a>
-        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+        <div id="collapseManufacturer" class="collapse" aria-labelledby="headingManufacturer" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
   
             <a class="collapse-item" href="{{ url('/manufacturer/add') }}">Add Manufacturer</a>
-            <a class="collapse-item" href="{{ url('/manufacturer/manage') }}">Manage Manufactured</a>
+            <a class="collapse-item" href="{{ url('/manufacturer/manage') }}">Manage Manufacturer</a>
+            
+          </div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseProduct" aria-expanded="true" aria-controls="collapseProduct">
+          <i class="fas fa-fw fa-wrench"></i>
+          <span>Product Info</span>
+        </a>
+        <div id="collapseProduct" class="collapse" aria-labelledby="headingProduct" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+  
+            <a class="collapse-item" href="{{ url('/product/add') }}">Add Product</a>
+            <a class="collapse-item" href="{{ url('/product/manage') }}">Manage Product</a>
             
           </div>
         </div>

@@ -45,6 +45,17 @@ Route::post('/manufacturer/update', 'ManufacturerController@updateManufacturer')
 
 Route::get('/manufacturer/delete/{id}', 'ManufacturerController@deleteManufacturer');
 
+/* Product Info */
+Route::get('/product/add', 'ProductController@createProduct');
+Route::post('/product/save', 'ProductController@storeProduct');
+
+Route::get('/product/manage', 'ProductController@manageProduct');
+
+Route::get('/product/edit/{id}', 'ProductController@editProduct');
+Route::post('/product/update', 'ProductController@updateProduct');
+
+Route::get('/product/delete/{id}', 'ProductController@deleteProduct');
+
 
 
 
