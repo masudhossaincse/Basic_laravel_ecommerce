@@ -2,6 +2,8 @@
 @section('title')
     HOME
 @endsection
+
+
 @section('home-content')
     <!--banner-->
 		<div class="banner-w3">

@@ -20,17 +20,20 @@
 			<tr>
 				
 				<td>{{ $product->productName }}</td>
-				<td>{{ $product->categoryId }}</td>
+				<td>{{ $product->categoryName }}</td>
 				<td>{{ $product->manufacturerName }}</td>
-				<td>{{ $product->productPrice }}</td>
+				<td>TK. {{ $product->productPrice }}</td>
 				<td>{{ $product->productQuantity }}</td>
 
 				<td>{{ $product->publicationStatus == 1 ? 'Published' : 'Unpublished' }}</td>
 				<td>
-					<a href="{{ url('/product/edit/'.$product->id) }}" class="btn btn-sm btn-success">
+					<a href="{{ url('/product/view/'.$product->id) }}" title="Product Info" class="btn btn-sm btn-info">
+						<i class="fas fa-eye"></i>
+					</a>
+					<a href="{{ url('/product/edit/'.$product->id) }}" title="Product Edit" class="btn btn-sm btn-success">
 						<i class="fas fa-edit"></i>
 					</a>
-					<a href="{{ url('/product/delete/'.$product->id) }}" onclick="return confirm('Are yor sure to delete');" class="btn btn-sm btn-danger">
+					<a href="{{ url('/product/delete/'.$product->id) }}" title="Product Delete" onclick="return confirm('Are yor sure to delete');" class="btn btn-sm btn-danger">
 						<i class="fas fa-trash"></i>
 					</a>
 				</td>
