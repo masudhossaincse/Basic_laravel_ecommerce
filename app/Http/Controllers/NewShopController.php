@@ -12,8 +12,11 @@ class NewShopController extends Controller
     	$publishProducts = Product::all();
     	return view('front-end.home.index', ['publishProducts'=>$publishProducts]);
     }
-    public function categoryContent()
+    public function categoryContent($id)
     {
-    	return view ('front-end.category.category-content');
+    	$publishedCategoryProducts = Product::where('categoryId', $id)
+    										->where('publicationStatus', 1)
+    										->get();
+    	return view ('front-end.category.category-content', ['publishedCategoryProducts'=>$publishedCategoryProducts]);
     }
 }

@@ -24,7 +24,8 @@
                             <label for="categoryDescription" class="col-md-4 col-form-label text-md-right">{{ __('Category Description') }}</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control" name="categoryDescription">
+                               
+                                <textarea name="categoryDescription" class="form-control" rows="5"></textarea>
                                 <span class="text-danger">{{ $errors->has('categoryDescription') ? $errors->first('categoryDescription') : '' }}</span>
                             </div>
                         </div>

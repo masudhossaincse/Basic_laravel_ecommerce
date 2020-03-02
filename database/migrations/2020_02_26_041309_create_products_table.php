@@ -20,8 +20,8 @@ class CreateProductsTable extends Migration
             $table->integer('manufacturerId');
             $table->float('productPrice',10,2);
             $table->integer('productQuantity');
-            $table->string('productShortDescription');
-            $table->string('productLongDescription');
+            $table->mediumText('productShortDescription');
+            $table->longText('productLongDescription');
             $table->text('productImage');
             $table->tinyInteger('publicationStatus');
             $table->timestamps();

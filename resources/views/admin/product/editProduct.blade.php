@@ -75,7 +75,7 @@
                             <label for="productShortDescription" class="col-md-4 col-form-label text-md-right">{{ __('Product Short Description') }}</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control" value="{{ $productById->productShortDescription }}" name="productShortDescription">
+                                <textarea name="productShortDescription" class="form-control" rows="5">{{ $productById->productShortDescription }}</textarea>
                                 <span class="text-danger">{{ $errors->has('productShortDescription') ? $errors->first('productShortDescription') : '' }}</span>
                             </div>
                         </div>
@@ -84,7 +84,7 @@
                             <label for="productLongDescription" class="col-md-4 col-form-label text-md-right">{{ __('Product Long Description') }}</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control" value="{{ $productById->productLongDescription }}" name="productLongDescription">
+                                <textarea name="productLongDescription" class="form-control" rows="5">{{ $productById->productLongDescription }}</textarea>
                                 <span class="text-danger">{{ $errors->has('productLongDescription') ? $errors->first('productLongDescription') : '' }}</span>
                             </div>
                         </div>

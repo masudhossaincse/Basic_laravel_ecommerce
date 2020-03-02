@@ -24,7 +24,7 @@
                             <label for="manufacturerDescription" class="col-md-4 col-form-label text-md-right">{{ __('Manufacturer Description') }}</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" value="{{ $manufacturerById->manufacturerDescription }}" class="form-control" name="manufacturerDescription">
+                                <textarea name="manufacturerDescription" class="form-control" rows="5">{{ $manufacturerById->manufacturerDescription }}</textarea>
                             </div>
                         </div>
 
