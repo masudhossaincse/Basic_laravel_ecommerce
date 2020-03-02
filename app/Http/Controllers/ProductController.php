@@ -85,18 +85,45 @@ class ProductController extends Controller
         return view('admin.product.editProduct', ['productById'=>$productById, 'categories'=>$categories, 'manufacturers'=>$manufacturers]);
     }
 
+
+
     public function updateProduct(Request $request)
     {
         $imageUrl = $this->imageExistStatus($request);
-        echo $imageUrl;
-        exit();
+
+        // echo $imageUrl;
+        // exit();
+
+        $product = Product::find($request->id);
+
+        $product->productName = $request->productName;
+        $product->categoryId = $request->categoryId;
+        $product->manufacturerId = $request->manufacturerId;
+        $product->productPrice = $request->productPrice;
+        $product->productQuantity = $request->productQuantity;
+        $product->productShortDescription = $request->productShortDescription;
+        $product->productLongDescription = $request->productLongDescription;
+        $product->productImage = $imageUrl;
+        $product->publicationStatus = $request->publicationStatus;
+        $product->save();
+
+        return redirect('/product/manage')->with('message', 'Successfully Updated Product Info');
+
+
     }
+
     private function imageExistStatus($request)
     {
         $productById = Product::where('id', $request->productId)->first();
+
+
+
+        $productImage = $request->file('productImage');
+      
+        
         if($productImage)
         {
-            unlink($productById->productImage);
+            // unlink($productById->productImage);
             $name = $productImage->getClientOriginalName();
             $uploadPath = 'productImage/';
             $productImage->move($uploadPath, $name);

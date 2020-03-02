@@ -12,7 +12,9 @@
 		<!--content-->
 			<div class="content">
 				<div class="products-agileinfo">
-						<h2 class="tittle">Women's Wear</h2>
+					@foreach($publishedCategories as $publishedCategory)
+						<h2 class="tittle">{{ $publishedCategory->categoryName }}</h2>
+					@endforeach
 					<div class="container">
 						<div class="product-agileinfo-grids w3l">
 							<div class="col-md-3 product-agileinfo-grid">
