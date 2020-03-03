@@ -98,17 +98,17 @@
 						<h2 class="tittle">New Arrivals</h2>
 						<div class="arrivals-grids">
 
-							@foreach($publishProducts as $publishProduct)
+							@foreach($publishedProducts as $publishedProduct)
 							<div class="col-md-3 arrival-grid simpleCart_shelfItem">
 								<div class="grid-arr">
 									<div  class="grid-arrival">
 										<figure>
 											<a href="#" class="new-gri" data-toggle="modal" data-target="#myModal1">
 												<div class="grid-img">
-													<img width="300" height="300"  src="{{ asset($publishProduct->productImage) }}" class="img-responsive" alt="">
+													<img width="300" height="300"  src="{{ asset($publishedProduct->productImage) }}" class="img-responsive" alt="">
 												</div>
 												<div class="grid-img">
-													<img width="300" height="300"  src="{{ asset($publishProduct->productImage) }}" class="img-responsive"  alt="">
+													<img width="300" height="300"  src="{{ asset($publishedProduct->productImage) }}" class="img-responsive"  alt="">
 												</div>
 											</a>
 										</figure>
@@ -123,9 +123,9 @@
 										<div class="starbox small ghosting"> </div>
 									</div>
 									<div class="women">
-										<h6><a href="single.html">{{ $publishProduct->productName }}</a></h6>
-										<span>{{ $publishProduct->productShortDescription }}</span>
-										<p >TK. {{ $publishProduct->productPrice }}</em></p>
+										<h6><a href="single.html">{{ $publishedProduct->productName }}</a></h6>
+										
+										<p >TK. {{ $publishedProduct->productPrice }}</em></p>
 										<a href="#" data-text="Add To Cart" class="my-cart-b item_add">Add To Cart</a>
 									</div>
 								</div>

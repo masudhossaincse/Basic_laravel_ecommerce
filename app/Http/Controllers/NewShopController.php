@@ -10,8 +10,8 @@ class NewShopController extends Controller
 {
     public function index()
     {
-    	$publishProducts = Product::all();
-    	return view('front-end.home.index', ['publishProducts'=>$publishProducts]);
+    	$publishedProducts = Product::all();
+    	return view('front-end.home.index', ['publishedProducts'=>$publishedProducts]);
     }
 
     public function categoryContent($id)

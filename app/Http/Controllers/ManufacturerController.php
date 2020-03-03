@@ -17,6 +17,7 @@ class ManufacturerController extends Controller
     	$this->validate($request,[
     		'manufacturerName' => 'required',
     		'manufacturerDescription' => 'required',
+            'publicationStatus' => 'required'
     	]);
 
     	$manufacturer = new Manufacturer();

@@ -22,7 +22,11 @@ Auth::routes();
 
 Route::get('/dashboard', 'HomeController@index')->name('home');
 
-/* Category Info */
+
+
+
+Route::group(['middleware' => ['AuthenticateMiddleware']], function () {
+    /* Category Info */
 Route::get('/category/add', 'CategoryController@createCategory');
 
 Route::post('/category/save', 'CategoryController@storeCategory');
@@ -56,6 +60,13 @@ Route::get('/product/edit/{id}', 'ProductController@editProduct');
 Route::post('/product/update', 'ProductController@updateProduct');
 
 Route::get('/product/delete/{id}', 'ProductController@deleteProduct');
+
+
+/*User Info*/
+
+Route::get('/user/manage', 'UserController@manageUser');
+
+});
 
 
 
