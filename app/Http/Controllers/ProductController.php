@@ -7,6 +7,7 @@ use App\Category;
 use App\Manufacturer;
 use App\Product;
 use DB;
+use Image;
 
 class ProductController extends Controller
 {
@@ -17,27 +18,40 @@ class ProductController extends Controller
         return view('admin.product.createProduct', ['categories'=>$categories, 'manufacturers'=>$manufacturers]);
     }
 
-    public function storeProduct(Request $request)
-    {
-        $this->validate($request,[
+
+
+
+   protected function productInfoValidate($request)
+   {
+    $this->validate($request,[
             'productName'=>'required',
             'productPrice'=>'required',
             'productQuantity'=>'required',
             'productImage'=>'required',
             
-        ]); 
+        ]);
+   } 
+
+   protected function productImageUpload($request)
+   {
+
+
 
 
         $productImage = $request->file('productImage');
-        $imageName = $productImage->getClientOriginalName();
+        // $imageName = $productImage->getClientOriginalName();
+        $fileType = $productImage->getClientOriginalExtension();
+        $imageName = $request->productName.'.'.$fileType;
         $uploadPath = 'productImage/';
-
-        $productImage->move($uploadPath, $imageName);
         $imageUrl = $uploadPath.$imageName;
+        // $productImage->move($uploadPath, $imageName);
+        Image::make($productImage)->save($imageUrl);
         
+        return $imageUrl;
+   }
 
-        
-
+   protected function saveProductBasicInfo($request, $imageUrl)
+   {
         $product = new Product();
         $product->productName = $request->productName;
         $product->categoryId = $request->categoryId;
@@ -49,7 +63,16 @@ class ProductController extends Controller
         $product->productImage = $imageUrl;
         $product->publicationStatus = $request->publicationStatus;
         $product->save();
+   }
 
+
+
+    public function storeProduct(Request $request)
+    {
+        $this->productInfoValidate($request);
+        $imageUrl = $this->productImageUpload($request);
+        $this->saveProductBasicInfo($request, $imageUrl);
+     
         return redirect('/product/add')->with('message', 'Product Information Saved Successfully');
 
     }
