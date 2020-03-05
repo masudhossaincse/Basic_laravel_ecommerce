@@ -51,7 +51,7 @@
 					<p>&copy; 2016 New Shop . All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
 				</div>
 				<div class="copy-right">
-					<img src="{{ URL:: asset('/') }}front-end/images/card.png" alt=""/>
+					<img src="{{ URL::asset('/') }}front-end/images/card.png" alt=""/>
 				</div>
 				<div class="clearfix"></div>
 			</div>
@@ -66,7 +66,7 @@
 			<div class="modal-body">
 				<div class="news-gr">
 					<div class="col-md-5 new-grid1">
-					<img src="{{ URL:: asset('/') }}front-end/images/p5.jpg" class="img-responsive" alt="">
+					<img src="{{ URL::asset('/') }}front-end/images/p5.jpg" class="img-responsive" alt="">
 					</div>
 						<div class="col-md-7 new-grid">
 							<h5>Ten Women's Cotton Viscose fabric Grey Shrug</h5>
@@ -111,7 +111,7 @@
 							<span class="size">XL / XXL / S </span>
 							<p ><del>$100.00</del><em class="item_price"> $70.00 </em></p>
 							<div class="add">
-								<button class="btn btn-danger my-cart-btn my-cart-b" data-id="3" data-name="Kabuli Chana" data-summary="summary 3" data-price="2.00" data-quantity="1" data-image="{{ URL:: asset('/') }}front-end/images/of2.png">Add to Cart</button>
+								<button class="btn btn-danger my-cart-btn my-cart-b" data-id="3" data-name="Kabuli Chana" data-summary="summary 3" data-price="2.00" data-quantity="1" data-image="{{ URL::asset('/') }}front-end/images/of2.png">Add to Cart</button>
 							</div>
 						</div>
 					</div>
@@ -130,7 +130,7 @@
 			<div class="modal-body">
 				<div class="news-gr">
 					<div class="col-md-5 new-grid1">
-					<img src="{{ URL:: asset('/') }}front-end/images/p7.jpg" class="img-responsive" alt="">
+					<img src="{{ URL::asset('/') }}front-end/images/p7.jpg" class="img-responsive" alt="">
 					</div>
 						<div class="col-md-7 new-grid">
 							<h5>Ten Women's Cotton Viscose fabric Grey Shrug</h5>
@@ -175,7 +175,7 @@
 							<span class="size">XL / XXL / S </span>
 							<p ><del>$100.00</del><em class="item_price"> $70.00 </em></p>
 							<div class="add">
-								<button class="btn btn-danger my-cart-btn my-cart-b" data-id="3" data-name="Kabuli Chana" data-summary="summary 3" data-price="2.00" data-quantity="1" data-image="{{ URL:: asset('/') }}front-end/images/of2.png">Add to Cart</button>
+								<button class="btn btn-danger my-cart-btn my-cart-b" data-id="3" data-name="Kabuli Chana" data-summary="summary 3" data-price="2.00" data-quantity="1" data-image="{{ URL::asset('/') }}front-end/images/of2.png">Add to Cart</button>
 							</div>
 						</div>
 					</div>
@@ -194,7 +194,7 @@
 			<div class="modal-body">
 				<div class="news-gr">
 					<div class="col-md-5 new-grid1">
-					<img src="{{ URL:: asset('/') }}front-end/images/p10.jpg" class="img-responsive" alt="">
+					<img src="{{ URL::asset('/') }}front-end/images/p10.jpg" class="img-responsive" alt="">
 					</div>
 						<div class="col-md-7 new-grid">
 							<h5>Ten Men's Cotton Viscose fabric Grey Shrug</h5>
@@ -239,7 +239,7 @@
 							<span class="size">XL / XXL / S </span>
 							<p ><del>$100.00</del><em class="item_price"> $70.00 </em></p>
 							<div class="add">
-								<button class="btn btn-danger my-cart-btn my-cart-b" data-id="3" data-name="Kabuli Chana" data-summary="summary 3" data-price="2.00" data-quantity="1" data-image="{{ URL:: asset('/') }}front-end/images/of2.png">Add to Cart</button>
+								<button class="btn btn-danger my-cart-btn my-cart-b" data-id="3" data-name="Kabuli Chana" data-summary="summary 3" data-price="2.00" data-quantity="1" data-image="{{ URL::asset('/') }}front-end/images/of2.png">Add to Cart</button>
 							</div>
 						</div>
 					</div>
@@ -258,7 +258,7 @@
 			<div class="modal-body">
 				<div class="news-gr">
 					<div class="col-md-5 new-grid1">
-					<img src="{{ URL:: asset('/') }}front-end/images/p12.jpg" class="img-responsive" alt="">
+					<img src="{{ URL::asset('/') }}front-end/images/p12.jpg" class="img-responsive" alt="">
 					</div>
 						<div class="col-md-7 new-grid">
 							<h5>Ten Men's Cotton Viscose fabric Grey Shrug</h5>
@@ -303,7 +303,7 @@
 							<span class="size">XL / XXL / S </span>
 							<p ><del>$100.00</del><em class="item_price"> $70.00 </em></p>
 							<div class="add">
-								<button class="btn btn-danger my-cart-btn my-cart-b" data-id="3" data-name="Kabuli Chana" data-summary="summary 3" data-price="2.00" data-quantity="1" data-image="{{ URL:: asset('/') }}front-end/images/of2.png">Add to Cart</button>
+								<button class="btn btn-danger my-cart-btn my-cart-b" data-id="3" data-name="Kabuli Chana" data-summary="summary 3" data-price="2.00" data-quantity="1" data-image="{{ URL::asset('/') }}front-end/images/of2.png">Add to Cart</button>
 							</div>
 						</div>
 					</div>

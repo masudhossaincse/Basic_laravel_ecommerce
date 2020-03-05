@@ -18,6 +18,8 @@ Route::get('/', function () {
 Route::get('/', 'NewShopController@index')->name('home');
 Route::get('/category-product/{id}', 'NewShopController@categoryContent')->name('category-product');
 
+Route::get('/product-details/{id}', 'NewShopController@productDetails')->name('product-details');
+
 Auth::routes();
 
 Route::get('/dashboard', 'HomeController@index')->name('home');

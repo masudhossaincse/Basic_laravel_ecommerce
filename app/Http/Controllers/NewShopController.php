@@ -27,5 +27,10 @@ class NewShopController extends Controller
 
 
     	return view ('front-end.category.category-content', ['publishedCategoryProducts'=>$publishedCategoryProducts, 'publishedCategories'=>$publishedCategories]);
-    }
+	}
+	public function productDetails($id)
+	{
+		$product = Product::find($id);
+		return view('front-end.product.product-details',['product'=>$product]);
+	}
 }

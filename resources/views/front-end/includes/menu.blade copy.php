@@ -29,10 +29,10 @@
 						</ul>
 					</div>
 					<div class="col-sm-3  multi-gd-img">
-							<a href="products.html"><img src="{{ URL:: asset('/') }}front-end/images/woo.jpg" alt=" "/></a>
+							<a href="products.html"><img src="{{ URL::asset('/') }}front-end/images/woo.jpg" alt=" "/></a>
 					</div> 
 					<div class="col-sm-3  multi-gd-img">
-							<a href="products.html"><img src="{{ URL:: asset('/') }}front-end/images/woo1.jpg" alt=" "/></a>
+							<a href="products.html"><img src="{{ URL::asset('/') }}front-end/images/woo1.jpg" alt=" "/></a>
 					</div>
 					<div class="clearfix"></div>
 				</div>
@@ -65,10 +65,10 @@
 						</ul>
 					</div>
 					<div class="col-sm-3  multi-gd-img">
-							<a href="products1.html"><img src="{{ URL:: asset('/') }}front-end/images/woo3.jpg" alt=" "/></a>
+							<a href="products1.html"><img src="{{ URL::asset('/') }}front-end/images/woo3.jpg" alt=" "/></a>
 					</div> 
 					<div class="col-sm-3  multi-gd-img">
-							<a href="products1.html"><img src="{{ URL:: asset('/') }}front-end/images/woo4.jpg" alt=" "/></a>
+							<a href="products1.html"><img src="{{ URL::asset('/') }}front-end/images/woo4.jpg" alt=" "/></a>
 					</div>
 					<div class="clearfix"></div>
 				</div>

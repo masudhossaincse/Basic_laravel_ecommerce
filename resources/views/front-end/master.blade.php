@@ -60,6 +60,34 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		});
 		</script>
 <!--//End-rate-->
+	<link href="{{ asset('/') }}front-end/css/owl.carousel.css" rel="stylesheet">
+	<script src="{{ asset('/') }}front-end/js/owl.carousel.js"></script>
+		<script>
+		$(document).ready(function() {
+		$("#owl-demo").owlCarousel({
+			items : 1,
+			lazyLoad : true,
+			autoPlay : true,
+			navigation : false,
+			navigationText :  false,
+			pagination : true,
+		});
+		});
+	</script>
+	<script defer src="{{ asset('/') }}front-end/js/jquery.flexslider.js"></script>
+	<link rel="stylesheet" href="{{ asset('/') }}front-end/css/flexslider.css" type="text/css" media="screen" />
+	<script src="{{ URL::asset('/') }}front-end/js/imagezoom.js"></script>
+	<script>
+// Can also be used with $(document).ready()
+		$(window).load(function() {
+		$('.flexslider').flexslider({
+			animation: "slide",
+			controlNav: "thumbnails"
+		});
+		});
+	</script>
+
+
 </head>
 <body>
 	<!--header-->
@@ -104,7 +132,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<a href="checkout.html">
 									<h3> <div class="total">
 										<span class="simpleCart_total"></span> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span> items)</div>
-										<img src="{{ URL:: asset('/') }}front-end/images/bag.png" alt="" />
+										<img src="{{ URL::asset('/') }}front-end/images/bag.png" alt="" />
 									</h3>
 								</a>
 								<p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>

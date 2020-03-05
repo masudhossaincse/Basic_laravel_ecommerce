@@ -7,7 +7,7 @@ use App\Category;
 use App\Manufacturer;
 use App\Product;
 use DB;
-use Image;
+use Image; 
 
 class ProductController extends Controller
 {
@@ -108,17 +108,27 @@ class ProductController extends Controller
         return view('admin.product.editProduct', ['productById'=>$productById, 'categories'=>$categories, 'manufacturers'=>$manufacturers]);
     }
 
+    protected function productInfoValidateUpdate($request)
+   {
+    $this->validate($request,[
+            'productName'=>'required',
+            'productPrice'=>'required',
+            'productQuantity'=>'required',
+            
+            
+        ]);
+   } 
 
 
     public function updateProduct(Request $request)
     {
+        
         $imageUrl = $this->imageExistStatus($request);
+        $this->productInfoValidateUpdate($request);
+          
 
-        // echo $imageUrl;
-        // exit();
-
-        $product = Product::find($request->id);
-
+        $product = Product::find($request->productId);
+        
         $product->productName = $request->productName;
         $product->categoryId = $request->categoryId;
         $product->manufacturerId = $request->manufacturerId;
@@ -135,18 +145,16 @@ class ProductController extends Controller
 
     }
 
-    private function imageExistStatus($request)
+    protected function imageExistStatus($request)
     {
+
         $productById = Product::where('id', $request->productId)->first();
-
-
-
+        
         $productImage = $request->file('productImage');
-      
         
         if($productImage)
         {
-            // unlink($productById->productImage);
+            unlink($productById->productImage);
             $name = $productImage->getClientOriginalName();
             $uploadPath = 'productImage/';
             $productImage->move($uploadPath, $name);
@@ -159,6 +167,8 @@ class ProductController extends Controller
         return $imageUrl;
 
     }
+    
+
 
 
 

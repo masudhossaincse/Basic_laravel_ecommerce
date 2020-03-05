@@ -134,6 +134,6 @@
 	document.forms['editProductForm'].elements['categoryId'].value={{ $productById->categoryId }}
 	document.forms['editProductForm'].elements['manufacturerId'].value={{ $productById->manufacturerId }}
 	
-</script>
+</script> 
 
 @endsection
