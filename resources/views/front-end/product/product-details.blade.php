@@ -43,33 +43,20 @@
 									<div class="description">
 										<p><span>Product Short Description :</span> {{ $product->productShortDescription }}</p>
 									</div>
-									<div class="color-quality">
-										<h6>Quality :</h6>
-											<div class="quantity"> 
-												<div class="quantity-select">                           
-													<div class="entry value-minus1">&nbsp;</div>
-													<div class="entry value1"><span>1</span></div>
-													<div class="entry value-plus1 active">&nbsp;</div>
-												</div>
-											</div>
-												<!--quantity-->
-														<script>
-														$('.value-plus1').on('click', function(){
-															var divUpd = $(this).parent().find('.value1'), newVal = parseInt(divUpd.text(), 10)+1;
-															divUpd.text(newVal);
-														});
 
-														$('.value-minus1').on('click', function(){
-															var divUpd = $(this).parent().find('.value1'), newVal = parseInt(divUpd.text(), 10)-1;
-															if(newVal>=1) divUpd.text(newVal);
-														});
-														</script>
-													<!--quantity-->
-									</div>
-									<div class="women">
-										<span class="size">XL / XXL / S </span>
-										<a href="#" data-text="Add To Cart" class="my-cart-b item_add">Add To Cart</a>
-									</div>
+									<form>
+										<div class="color-quality">
+											<h6>Quantity :</h6>
+												<div class="quantity"> 
+													<input type="number" name="qty" value="1" min="1">
+													<input type="hidden" name="qty" value="{{ $product->id }}">
+												</div>
+										</div>
+										<div class="women">
+											<input type="text" name="btn" value="Add To Cart" class="my-cart-b item_add">
+										</div>
+									</form>
+
 									<div class="social-icon">
 										<a href="#"><i class="icon"></i></a>
 										<a href="#"><i class="icon1"></i></a>
